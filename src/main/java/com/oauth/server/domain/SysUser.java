@@ -48,10 +48,6 @@ public class SysUser implements UserDetails,Serializable{
     public void setId(Integer id) {
         this.id = id;
     }
-
-
-
-
     public void setPassword(String password) {
         this.password = password;
     }

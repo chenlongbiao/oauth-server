@@ -36,7 +36,7 @@
 </body>
 <script type="text/javascript">
     function login() {
-        $.post("/auth/login",{username: "123" , password: "123"},function (test) {
+        $.post("/auth/oauth/token",{username: "123" , password: "123"},function (test) {
             console.log(test)
         });
     }

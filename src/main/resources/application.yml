@@ -23,3 +23,8 @@ logging:
 
 mybatis:
   mapperLocations: classpath*:mapper/*.xml
+
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3
