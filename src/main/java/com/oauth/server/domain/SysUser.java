@@ -17,7 +17,6 @@ import java.util.List;
 public class SysUser implements UserDetails,Serializable{
 
 
-    private static final long serialVersionUID = -7046288984095404512L;
     private Integer id;
     private String username;
     private String password;
