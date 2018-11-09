@@ -2,6 +2,7 @@ package com.oauth.server.config.security;
 
 import com.oauth.server.domain.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -40,6 +41,9 @@ import java.util.Map;
 @Configuration
 @EnableAuthorizationServer
 public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
+
+    @Value("${jwt.key}")
+    private String key;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -82,7 +86,7 @@ public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
     @Bean
     JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-        jwtAccessTokenConverter.setSigningKey("123");
+        jwtAccessTokenConverter.setSigningKey(key);
         return   jwtAccessTokenConverter;
     }
 
@@ -93,10 +97,12 @@ public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
             Authentication userAuthentication = authentication.getUserAuthentication();
             SysUser sysUser = (SysUser)userAuthentication.getPrincipal();
             additionalInfo.put("sub", sysUser.getUsername());
+            additionalInfo.put("created",System.currentTimeMillis());
             ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);
             return accessToken;
         }
     }
+
 
     @Bean
     public TokenEnhancer tokenEnhancer() {

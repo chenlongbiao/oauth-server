@@ -28,3 +28,5 @@ mybatis:
 #  oauth2:
 #    resource:
 #      filter-order: 3
+jwt:
+  key: 123
