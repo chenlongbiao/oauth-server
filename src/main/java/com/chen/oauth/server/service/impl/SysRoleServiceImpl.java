@@ -1,8 +1,8 @@
-package com.oauth.server.service.impl;
+package com.chen.oauth.server.service.impl;
 
-import com.oauth.server.dao.SysRoleDao;
-import com.oauth.server.domain.SysRole;
-import com.oauth.server.service.SysRoleService;
+import com.chen.oauth.server.dao.SysRoleDao;
+import com.chen.oauth.server.domain.SysRole;
+import com.chen.oauth.server.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

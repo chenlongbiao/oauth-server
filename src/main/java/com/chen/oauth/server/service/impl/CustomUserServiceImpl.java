@@ -1,9 +1,9 @@
-package com.oauth.server.service.impl;
+package com.chen.oauth.server.service.impl;
 
 
-import com.oauth.server.dao.UserDao;
-import com.oauth.server.domain.SysUser;
-import com.oauth.server.service.UserService;
+import com.chen.oauth.server.dao.UserDao;
+import com.chen.oauth.server.domain.SysUser;
+import com.chen.oauth.server.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -28,7 +28,7 @@ public class CustomUserServiceImpl implements UserService {
     }
 
     public static void main(String[] args) {
-        String pwd = "testclient";
+        String pwd = "123";
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         // 加密
         String encodedPassword = passwordEncoder.encode(pwd);
@@ -36,7 +36,6 @@ public class CustomUserServiceImpl implements UserService {
         boolean matches = passwordEncoder.matches("{bcrypt}"+encodedPassword, "{bcrypt}"+encodedPassword);
         System.out.println(matches);
         byte[] decode = Base64.getDecoder().decode(Utf8.encode("PlT5fqqyiKt/HJzy7JPrhO9Fo80W7YkHxxNdXkF37GZ1WJmtzcvl"));
-        System.out.println(decode);
-
+        System.out.println(decode.toString());
     }
 }

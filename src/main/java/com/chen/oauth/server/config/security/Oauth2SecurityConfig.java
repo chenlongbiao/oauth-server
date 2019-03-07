@@ -1,7 +1,7 @@
-package com.oauth.server.config.security;
+package com.chen.oauth.server.config.security;
 
-import com.oauth.server.service.UserService;
-import com.oauth.server.service.impl.CustomUserServiceImpl;
+import com.chen.oauth.server.service.UserService;
+import com.chen.oauth.server.service.impl.CustomUserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

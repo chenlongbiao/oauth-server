@@ -1,6 +1,6 @@
-package com.oauth.server.dao;
+package com.chen.oauth.server.dao;
 
-import com.oauth.server.domain.SysRole;
+import com.chen.oauth.server.domain.SysRole;
 
 import java.util.List;
 

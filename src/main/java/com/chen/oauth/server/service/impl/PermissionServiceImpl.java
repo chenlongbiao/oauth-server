@@ -1,9 +1,8 @@
-package com.oauth.server.service.impl;
+package com.chen.oauth.server.service.impl;
 
-import com.oauth.server.dao.PermissionDao;
-import com.oauth.server.domain.Permission;
+import com.chen.oauth.server.domain.Permission;
+import com.chen.oauth.server.dao.PermissionDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

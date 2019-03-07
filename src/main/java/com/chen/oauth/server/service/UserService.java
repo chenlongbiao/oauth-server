@@ -1,4 +1,4 @@
-package com.oauth.server.service;
+package com.chen.oauth.server.service;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 

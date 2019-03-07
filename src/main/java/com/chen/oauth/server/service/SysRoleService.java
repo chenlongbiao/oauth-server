@@ -1,5 +1,5 @@
-package com.oauth.server.service;
-import com.oauth.server.domain.SysRole;
+package com.chen.oauth.server.service;
+import com.chen.oauth.server.domain.SysRole;
 
 import java.util.List;
 

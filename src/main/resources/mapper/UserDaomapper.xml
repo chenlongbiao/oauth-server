@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.oauth.server.dao.UserDao">
-    <resultMap id="userMap" type="com.oauth.server.domain.SysUser">
+<mapper namespace="com.chen.oauth.server.dao.UserDao">
+    <resultMap id="userMap" type="com.chen.oauth.server.domain.SysUser">
         <id property="id" column="ID"/>
         <result property="username" column="username"/>
         <result property="password" column="PASSWORD"/>
         <result property="phone" column="phone"/>
         <result property="mail" column="mail"/>
-        <collection property="roles" ofType="com.oauth.server.domain.SysRole">
+        <collection property="roles" ofType="com.chen.oauth.server.domain.SysRole">
             <result column="name" property="name"/>
         </collection>
     </resultMap>
@@ -16,6 +16,6 @@
         from Sys_User u
         LEFT JOIN sys_role_user sru on u.id= sru.Sys_User_id
         LEFT JOIN Sys_Role r on sru.Sys_Role_id=r.id
-        where username= #{username}
+        where u.username= #{username}
     </select>
 </mapper>

@@ -1,4 +1,4 @@
-package com.oauth.server;
+package com.chen.oauth.server;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
