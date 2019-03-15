@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.oauth.server.dao")
+@MapperScan("com.chen.oauth.server.dao")
 public class ServerApplication {
 
     public static void main(String[] args) {

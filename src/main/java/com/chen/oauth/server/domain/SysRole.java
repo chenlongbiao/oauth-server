@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class SysRole implements Serializable {
 
     private static final long serialVersionUID = -3846303358514585278L;
-    private Integer id;
+    private String id;
     private String name;
     private String url;
     private String desc;
@@ -27,10 +27,10 @@ public class SysRole implements Serializable {
         this.desc = desc;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getName() {

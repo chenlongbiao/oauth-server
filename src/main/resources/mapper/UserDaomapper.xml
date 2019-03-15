@@ -8,6 +8,7 @@
         <result property="phone" column="phone"/>
         <result property="mail" column="mail"/>
         <collection property="roles" ofType="com.chen.oauth.server.domain.SysRole">
+            <result column="id" property="id"/>
             <result column="name" property="name"/>
         </collection>
     </resultMap>

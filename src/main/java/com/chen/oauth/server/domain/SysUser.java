@@ -111,7 +111,7 @@ public class SysUser implements UserDetails,Serializable{
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
         for (SysRole role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
+            authorities.add(new SimpleGrantedAuthority(role.getId()));
         }
         return authorities;
     }
